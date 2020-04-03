@@ -1,4 +1,8 @@
-walk(document.body);
+window.addEventListener ("load", start, false);
+
+function start(evt){
+	walk(document.body);
+}
 
 function walk(node) 
 {
@@ -39,10 +43,10 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
+	v = v.replace(/\bCorona Virus|Corona virus|corona virus|Coronavirus|coronavirus\b/g, "My Butt");
+	v = v.replace(/\bCovid19|covid19|Covid 19|covid 19|COVID 19|Covid-19|COVID-19\b/g, "b-u-t-t-o-m");
+	v = v.replace(/\bNovel|novel\b/g, "Not");
+	v = v.replace(/\bPandemic|pandemic\b/g, "situation");
 	
 	textNode.nodeValue = v;
 }
